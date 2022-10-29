@@ -1,0 +1,195 @@
+/* 
+- Global Style
+- Loading Screen
+- Aside Menu
+- Scrollbar
+*/
+
+/*******************  Global Style  *********************/
+:root {
+  --primary-color: #F8F6F6;
+  --secondary-color: #212529;
+  --text-color: #f9f6f6;
+  --bg-color: #0D0D0D;
+}
+
+body {
+  font-family: '', sans-serif;
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+  -o-transition: 0.5s all;
+}
+
+main {
+  min-height: 100vh;
+  background-color: var(--bg-color);
+}
+
+main section {
+  padding-left: 60px;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+/****************** Loading Screen *******************/
+#loading {
+  position: fixed;
+  inset:0;
+  z-index: 100;
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/******************* Aside Menu  *********************/
+.aside-menu {
+  position: fixed;
+  left: -250px;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  background: var(--bg-color);
+  display: flex;
+  z-index: 999;
+}
+
+.aside-menu .main-menu,
+.aside-menu .sub-menu {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: initial;
+  flex-direction: column;
+}
+
+.aside-menu .main-menu {
+  width: 250px;
+  padding: 20px;
+}
+
+.aside-menu .main-menu ul {
+  display: flex;
+  flex-flow: column wrap;
+  overflow: hidden;
+}
+
+.aside-menu .main-menu ul li {
+  text-transform: capitalize;
+}
+
+.aside-menu .main-menu .nav-link {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  color: var(--text-color);
+}
+
+.aside-menu .main-menu .menu-footer li a {
+  font-size: 18px;
+  color: var(--secondary-color);
+  padding: 4px 2px 0;
+}
+
+.aside-menu .main-menu p {
+  line-height: 28px;
+  color: #999;
+}
+
+.aside-menu .sub-menu {
+  width: 60px;
+  align-items: center;
+  padding: 20px 0;
+  background-color: var(--primary-color);
+}
+
+.aside-menu .sub-menu img {
+  width: 45px;
+  height: 45px;
+}
+
+.sub-menu .toggle-btn:focus {
+  outline: 0 !important;
+  box-shadow: 0 0 0 transparent;
+  border: 0;
+}
+
+.sub-menu .toggle-btn span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: var(--secondary-color);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.sub-menu .toggle-btn span {
+  transform-origin: 26%;
+  transition: 0.2s all;
+  -webkit-transition: 0.2s all;
+  -moz-transition: 0.2s all;
+  -ms-transition: 0.2s all;
+  -o-transition: 0.2s all;
+}
+
+.sub-menu .toggle-btn[menu-expanded="true"] span:first-child,
+.sub-menu .toggle-btn[menu-expanded="true"] span:last-child {
+  width: 0;
+  transition: none !important;
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
+.sub-menu .toggle-btn[menu-expanded="true"] span:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+.sub-menu .toggle-btn[menu-expanded="true"] span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+ 
+.aside-menu .sub-menu .options {
+  display: flex;
+  flex-flow: column;
+}
+
+.aside-menu .sub-menu .options a {
+  color: var(--secondary-color);
+}
+
+/*************** Scrollbar ***************/
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-button {
+  width: 100%;
+  height: 100%;
+ }
+
+::-webkit-scrollbar-thumb {
+ border-radius: 5px;
+ background-color: var(--bg-color);
+}
+
+::-webkit-scrollbar-corner {
+ background-color: var(--primary-color);
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-button {
+  background-color: var(--primary-color);
+  border-radius: 5px;
+}

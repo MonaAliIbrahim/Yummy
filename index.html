@@ -1,0 +1,97 @@
+<html>
+  <head>
+    <title>Yummy</title>
+    <link rel="icon" href="images/logo.png">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Import Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/general_style.css">
+    <link rel="stylesheet" href="css/custom_animation.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Import Fonts -->
+    <link rel="stylesheet" href="css/all.min.css">
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div id="loading">
+      <i class="fa fa-spinner fa-spin fa-5x text-white"></i>
+    </div>
+     <!-- Aside Menu -->
+    <div class="aside-menu">
+      <div class="main-menu">
+        <div class="menu-links">
+          <ul class="nav">
+            <li class="nav-item wow" data-wow-duration="0.8s" data-wow-delay="0s">
+              <a class="nav-link" href="#">search</a>
+            </li>
+            <li class="nav-item wow" data-wow-duration="0.8s" data-wow-delay="0.1s">
+              <a class="nav-link" href="#">categories</a>
+            </li>
+            <li class="nav-item wow" data-wow-duration="0.8s" data-wow-delay="0.2s">
+              <a class="nav-link" href="#">area</a>
+            </li>
+            <li class="nav-item wow" data-wow-duration="0.8s" data-wow-delay="0.3s">
+              <a class="nav-link" href="#">ingredients</a>
+            </li>
+            <li class="nav-item wow" data-wow-duration="0.8s" data-wow-delay="0.4s">
+              <a class="nav-link" href="#">contact us</a>
+            </li>
+          </ul>
+        </div>
+        <div class="menu-footer">
+          <ul class="list-unstyled flex-row">
+            <li class="m-2">
+              <a href="" target="_blank">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+            </li>
+            <li class="m-2">
+              <a href="" target="_blank">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+            </li>
+            <li class="m-2">
+              <a href="" target="_blank">
+                <i class="fa fa-globe"></i>
+              </a>
+            </li>
+          </ul>
+          <p class="text-capitalize">
+            copyright a&#770; &copy; <span id="year"></span> all rights reserved.
+          </p>
+        </div>
+      </div>
+      <div class="sub-menu">
+        <img src="images/logo.png" alt="website logo">
+        <button class="toggle-btn border-0 bg-transparent" menu-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="options text-center">
+          <a href="" target="_blank">
+            <i class="fa fa-globe my-2"></i>
+          </a>
+          <a href="" target="_blank">
+            <i class="fa fa-share-alt my-2"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <main> 
+      <section id="homeSection">
+        <div class="container py-5">
+          <div class="row py-5 m-4 g-4" id="mealsContainer">
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/main.js" type="module"></script>
+  </body>
+</html>
