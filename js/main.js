@@ -28,10 +28,7 @@ $(document).ready(function() {
       $(this).attr('menu-expanded','true');
     }
     else {
-      $('.aside-menu .nav-item').addClass('fadeOutLeftBig');
-      setTimeout(() => {
-        closeMenu.call(this);
-      },300);
+      closeMenu.call(this);
     }
   });
 
@@ -62,8 +59,11 @@ $(document).ready(function() {
   });
 
   function closeMenu() {
-    $('.aside-menu').animate({left: '-250px'}, 500);
-    $(this).attr('menu-expanded', 'false');
+    $('.aside-menu .nav-item').addClass('fadeOutLeftBig');
+    setTimeout(() => {
+      $('.aside-menu').animate({left: '-250px'}, 500);
+      $(this).attr('menu-expanded', 'false');
+    },300);
   }
 
   // Get Default Meals
